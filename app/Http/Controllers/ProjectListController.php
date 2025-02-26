@@ -9,7 +9,7 @@ class ProjectListController extends Controller{
 
     //this method manage the route and seo property of ProjectList page
     public function page(Request $request){
-        return view('pages.projects');
+        return view('pages.project');
     }
 
     //this method get the ProjectList data from database

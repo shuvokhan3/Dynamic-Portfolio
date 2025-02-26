@@ -16,6 +16,16 @@ class ResumeController extends Controller{
         return DB::table('resumes')->get();
     }
 
+    //this method get skills data into the database
+    public function skillData(Request $request){
+        return DB::table('skills')->get();
+    }
+    //this method get languages data into the database
+    public function languageData(Request $request){
+        return DB::table('languages')->get();
+    }
+
+
     //get experiences data from the database
     public function experienceData(Request $request){
         return DB::table('experiences')->get();

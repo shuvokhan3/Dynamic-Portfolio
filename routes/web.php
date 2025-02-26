@@ -11,8 +11,8 @@ use Illuminate\Support\Facades\Route;
 //Page view
 Route::get('/',[HomeController::class,'page']);
 Route::get('/resume',[ResumeController::class,'page']);
-Route::get('contact',[ContactController::class,'page']);
-Route::post('project',[ProjectListController::class,'page']);
+Route::get('/contact',[ContactController::class,'page']);
+Route::get('/project',[ProjectListController::class,'page']);
 
 //Ajax call route
 Route::get('heroData',[HomeController::class,'heroData']);

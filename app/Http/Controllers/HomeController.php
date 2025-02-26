@@ -24,16 +24,6 @@ class HomeController extends Controller{
         return DB::table('projects')->get();
     }
 
-    //this method get skills data into the database
-    public function skillData(Request $request){
-        return DB::table('skills')->get();
-    }
-    //this method get languages data into the database
-    public function languageData(Request $request){
-        return DB::table('languages')->get();
-    }
-
-
     //this method get the about section data from the database
     public function aboutData(Request $request){
         return DB::table('abouts')->get();

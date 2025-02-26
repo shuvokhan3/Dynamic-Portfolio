@@ -6,7 +6,10 @@
     <meta name="description" content=""/>
     <meta name="author" content="" />
     <title>Portfolio</title>
-
+    <link rel="icon" type="image/x-icon" href="{{asset('assets/fav')}}" />
+    <link href="{{asset('https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css')}}" rel="stylesheet" />
+    <link href="{{asset('css/bootstrap.css')}}" rel="stylesheet" />
+    <link href="{{asset('css/style.css')}}" rel="stylesheet" />
 </head>
 
 <body>
