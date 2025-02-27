@@ -24,7 +24,7 @@
                         </div>
                         <!-- Phone number input-->
                         <div class="form-floating mb-3">
-                            <input class="form-control" id="phone" type="tel" placeholder="(123) 456-7890"/>
+                            <input class="form-control" id="phone" type="tel" placeholder="+01"/>
                             <label for="phone">Phone number</label>
                         </div>
                         <!-- Message input-->
@@ -42,6 +42,67 @@
 
 </section>
 
+
+<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
 <script>
-    let form = document.getElementById('contactForm')
+    //using ajax i send post request to serve when user click the button
+
+    //using js DOM i take the contact form
+    let contactForm = document.getElementById('contactForm');
+    //using when user submit the form this time addEvenListener run a anonomus function
+    contactForm.addEventListener('submit', async (event) => {
+        //Stop the reload the whole page, when i click the form button
+        event.preventDefault();
+
+        //pull the all value inside the form
+        let name = document.getElementById('name').value;
+        let email = document.getElementById('email').value;
+        let phone = document.getElementById('phone').value;
+        let message = document.getElementById('message').value;
+
+
+        //form validation
+        if (name.length === 0) {
+            alert('Name is not empty!');
+        } else if (email.length === 0) {
+            alert('Email is not empty!');
+        } else if (phone.length === 0) {
+            alert('Phone number is not empty!');
+        }else if(message.length === 0){
+            alert('Message is not empty!')
+        }else {
+            //create a json object
+            let formData = {
+                fullName: name,
+                email: email,
+                phone: phone,
+                message: message,
+            }
+
+            //i create a route name "contactRequest"
+            let URL = "/contactRequest";
+
+            //show loader
+            document.getElementById('loading-div').classList.remove('d-none');
+            document.getElementById('content-div').classList.add('d-none');
+
+            //Now post this json object in server using axios
+            let result = await axios.post(URL, formData);
+
+            //close loader
+            document.getElementById('loading-div').classList.add('d-none');
+            document.getElementById('content-div').classList.remove('d-none');
+
+
+            contactForm.reset();
+        }
+
+
+
+
+
+
+
+    });
+
 </script>

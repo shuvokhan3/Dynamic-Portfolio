@@ -10,6 +10,7 @@
     <link href="{{asset('https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css')}}" rel="stylesheet" />
     <link href="{{asset('css/bootstrap.css')}}" rel="stylesheet" />
     <link href="{{asset('css/style.css')}}" rel="stylesheet" />
+    <script src="{{asset('https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js')}}"></script>
 </head>
 
 <body>
@@ -21,6 +22,7 @@
 </div>
 
 @include('components.footer')
+
 </body>
 
 </html>
