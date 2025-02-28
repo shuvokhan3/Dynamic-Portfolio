@@ -17,8 +17,8 @@ Route::get('/project',[ProjectListController::class,'page']);
 //Ajax call route
 Route::get('heroData',[HomeController::class,'heroData']);
 Route::get('projectData',[HomeController::class,'projectData']);
-Route::get('skillData',[HomeController::class,'skillData']);
-Route::get('languageData',[HomeController::class,'languageData']);
+Route::get('skillData',[ResumeController::class,'skillData']);
+Route::get('languageData',[ResumeController::class,'languageData']);
 Route::get('aboutData',[HomeController::class,'aboutData']);
 Route::get('socialLinksData',[HomeController::class,'socialLinksData']);
 Route::post('contactRequest',[ContactController::class,'contactRequest']);

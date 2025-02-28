@@ -104,3 +104,23 @@ html {
     0% { transform: rotate(0deg); }
     100% { transform: rotate(360deg); }
 }
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+@media (max-width: 768px) {
+    .profile-img {
+        max-width: 80%;
+        margin: 0 auto;
+    }
+    
+    .card-body {
+        padding: 1rem !important;
+    }
+    
+    .display-3 {
+        font-size: calc(1.525rem + 3.3vw) !important;
+    }
+}
