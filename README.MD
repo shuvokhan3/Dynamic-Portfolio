@@ -10,6 +10,7 @@ A dynamic personal portfolio website built with Laravel, featuring a responsive 
     - Skills and languages proficiency
     - Educational background
     - About section with social media links
+    - Add Dynamic SEO property for all the pages
 
 - **Interactive Components**
     - Responsive navigation

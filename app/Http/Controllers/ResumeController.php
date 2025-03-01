@@ -8,7 +8,8 @@ use Illuminate\Support\Facades\DB;
 class ResumeController extends Controller{
     //this method manage page route ,seo property
     public function page(Request $request){
-        return view('pages.resume');
+        $seo = DB::table('seoproperties')->where('pageName','=' ,'resume')->first();
+        return view('pages.resume',['seo'=>$seo]);
     }
 
     //get resumes data from database

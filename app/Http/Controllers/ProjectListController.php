@@ -9,7 +9,8 @@ class ProjectListController extends Controller{
 
     //this method manage the route and seo property of ProjectList page
     public function page(Request $request){
-        return view('pages.project');
+        $seo = DB::table('seoproperties')->where('pageName','=','Project')->first();
+        return view('pages.project',['seo'=>$seo]);
     }
 
     //this method get the ProjectList data from database

@@ -9,7 +9,8 @@ class HomeController extends Controller{
 
     //this method manage route and load the property of seo in home page
     public function page(Request $request){
-        return view('pages.home');
+        $seo = DB::table('seoproperties')->where('pageName','=','home')->first();
+        return view('pages.home',['seo'=>$seo]);
     }
 
     //this method get the hero section data from the database
